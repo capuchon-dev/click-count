@@ -4,7 +4,7 @@ pipeline {
     disableConcurrentBuilds()
   }
   environment {
-    UNIQ_TAG = ${GIT_BRANCH.toLowerCase()}-${BUILD_NUMBER}
+    UNIQ_TAG = ${GIT_BRANCH.toLowerCase()} + '-' + ${BUILD_NUMBER}
     STAGE_REDIS_HOST = '35.156.31.64'
     STAGE_REDIS_PORT = '6379'
     PROD_REDIS_HOST = '18.184.113.138'
